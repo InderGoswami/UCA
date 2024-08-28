@@ -20,7 +20,7 @@ double calculate_time(int arr[],int n){
     s_time=clock();
     bubble_sort(arr,n);
     e_time=clock();
-    CPU_time=(double)((e_time-s_time)/CLOCKS_PER_SEC);
+    CPU_time=(double)(e_time-s_time)/CLOCKS_PER_SEC;
     return CPU_time;
 
 
@@ -53,12 +53,12 @@ int main(){
     for(int i=0;i<s1;i++){
         arr1[i]=rand();
     }
-    long t1=calculate_time(arr1,s1);
+    double t1=calculate_time(arr1,s1);
     int s2=1000000;
     int *arr2=(int*)(malloc(sizeof(int)*s2));
     for(int i=0;i<s2;i++){
         arr2[i]=rand();
     }
-    long t2=calculate_time(arr2,s2);
+    double t2=calculate_time(arr2,s2);
     printf("%lf",t2*1.0);
 }
